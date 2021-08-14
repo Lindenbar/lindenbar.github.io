@@ -1,0 +1,86 @@
+#person-preview .icon {
+    fill: #798490;
+    margin-right: 7px;
+    transition: 0.2s;
+}
+
+#person-preview .icon:hover {
+    margin-bottom: -7px
+}
+
+#person-preview #discord-icon {
+    width: 20px;
+    height: 20px;
+}
+
+#person-preview #discord-icon:hover {
+    fill: #5865F2;
+    width: 27px;
+    height: 27px;
+}
+
+#person-preview #instagram-icon {
+    width: 17px;
+    height: 17px;
+}
+
+#person-preview #instagram-icon:hover {
+    width: 24px;
+    height: 24px;
+    fill: url(#myGradient);
+}
+
+#person-preview #telegram-icon {
+    width: 19px;
+    height: 19px;
+}
+
+#person-preview #telegram-icon:hover {
+    fill: #3390ec;
+    width: 26px;
+    height: 26px;
+}
+
+#person-preview #vk-icon {
+    width: 23px;
+    height: 23px;
+}
+
+#person-preview #vk-icon:hover {
+    fill: #2787f5;
+    width: 30px;
+    height: 30px;
+}
+
+#person-preview #whatsapp-icon {
+    width: 18.7px;
+    height: 18.7px;
+}
+
+#person-preview #whatsapp-icon:hover {
+    fill: #00e676;
+    width: 25.7px;
+    height: 25.7px;
+}
+
+#contact-me #vk-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    fill: white;
+}
+
+#certificates #link-icon, #certificates #download-icon {
+    height: 20px;
+    fill: #c2c2c2;
+}
+
+.certificateAction a:hover div #link-icon {
+    fill: #4183c4 !important;
+}
+
+.certificateAction a:hover div #download-icon {
+    fill: #25ab21 !important;
+}
+

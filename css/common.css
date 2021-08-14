@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jura', sans-serif;
+}
+
+body {
+    padding: 20px 100px;
+    background-color: rgba(215, 224, 234, 0.60);
+}
+
+main {
+    width: 70%;
+    margin-right: 20px;
+}
+
+aside {
+    width: 30%;
+}
+
+.dark-gray {
+    color: #404449;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.info-block {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px 20px;
+}
+
+.block-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+}
