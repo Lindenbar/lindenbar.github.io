@@ -1,0 +1,22 @@
+#git-activity {
+    height: 600px;
+    width: 100%;
+}
+
+#git-calendar {
+    border: 1px solid #ddd;
+    border-bottom: none;
+    width: 100%;
+}
+
+.Link--muted {
+    display: none;
+}
+
+.color-text-secondary {
+    text-align: center;
+}
+
+.js-calendar-graph {
+    padding: 15px;
+}

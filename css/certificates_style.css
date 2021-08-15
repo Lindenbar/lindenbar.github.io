@@ -1,0 +1,48 @@
+.certificate {
+    margin-bottom: 20px;
+}
+
+.certificate img {
+    border-right: #ddd 1px solid;
+    border-bottom: #ddd 1px solid;
+    border-bottom-right-radius: 5px;
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+}
+
+.certificate-action {
+    width: 10%;
+}
+
+.certificate-action a div {
+    height: 35%;
+}
+
+.certificate-action a:nth-child(1) div {
+    border: 1px solid #ddd;
+    border-top-right-radius: 20px;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-action a:nth-child(2) div {
+    border: 1px solid #ddd;
+    border-bottom-right-radius: 20px;
+    border-left: none;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-box {
+    display: flex;
+}
+
+.certificate-action a:hover div {
+    background-color: #ddd;
+}
+

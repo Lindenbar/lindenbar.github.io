@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=510">
     <title>Портфолио</title>
     <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <!-- github-activity dependencies -->
+    <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+    <!-- -->
+    <!-- github-activity plugin -->
+    <script type="text/javascript" src="lib/github-activity/src/github-activity.js"></script>
+    <!-- -->
+    <!-- github-calendar plugin -->
+    <script type="text/javascript" src="lib/github-calendar/dist/github-calendar.min.js"></script>
+    <!-- -->
+    <!-- github-activity css -->
+    <link rel="stylesheet" href="https://unpkg.com/octicons@4.4.0/build/font/octicons.css">
+    <link rel="stylesheet" href="lib/github-activity/src/github-activity.css">
+    <!-- -->
+    <!-- github-calendar css -->
+    <link rel="stylesheet" href="lib/github-calendar/dist/github-calendar-responsive.css">
+    <!-- -->
+    <link rel="stylesheet" href="css/github_style.css">
     <link rel="stylesheet" href="css/common.css">
     <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header_style.css">
     <link rel="stylesheet" href="css/icons_style.css">
+    <link rel="stylesheet" href="css/skills_style.css">
+    <link rel="stylesheet" href="css/certificates_style.css">
 </head>
 <body>
     <header>
@@ -75,8 +94,158 @@
             </div>
         </section>
     </header>
-    <main></main>
-    <aside></aside>
+    <section class="flex">
+        <main>
+            <section id="about-me" class="info-block">
+                <div class="block-title dark-gray">About me</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque rutrum iaculis. Suspendisse at
+                    ultricies tortor. Aliquam sit amet diam vel diam condimentum rhoncus. In eleifend, quam sit amet condimentum
+                    pretium, nisi tortor tincidunt dolor, sed feugiat ex lectus eu urna. Nullam ultrices tristique mi ut hendrerit.
+                </div>
+            </section>
+            <section id="my-projects" class="info-block">
+                <div class="block-title dark-gray">My projects</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque rutrum iaculis. Suspendisse at
+                    ultricies tortor. Aliquam sit amet diam vel diam condimentum rhoncus. In eleifend, quam sit amet condimentum
+                    pretium, nisi tortor tincidunt dolor, sed feugiat ex lectus eu urna. Nullam ultrices tristique mi ut hendrerit.
+                </div>
+            </section>
+            <section id="experience" class="info-block">
+                <div class="block-title dark-gray">Experience</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque rutrum iaculis. Suspendisse at
+                    ultricies tortor. Aliquam sit amet diam vel diam condimentum rhoncus. In eleifend, quam sit amet condimentum
+                    pretium, nisi tortor tincidunt dolor, sed feugiat ex lectus eu urna. Nullam ultrices tristique mi ut hendrerit.
+                </div>
+            </section>
+            <section id="github" class="info-block">
+                <div class="block-title dark-gray">My GitHub</div>
+                <div class="block-content">
+                    <div id="git-calendar"></div>
+                    <div id="git-activity"></div>
+                </div>
+            </section>
+        </main>
+        <aside>
+            <section id="address" class="info-block">
+                <div class="block-content">
+                    <ul>
+                        <li><a href="#">address</a></li>
+                        <li><a href="#">email</a></li>
+                        <li><a href="#">website</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="skills" class="info-block">
+                <div class="block-title dark-gray">Навыки</div>
+                <div class="block-content">
+                    Sed tristique eros ac pretium varius. Maecenas commodo, arcu ut gravida elementum, libero nulla iaculis enim,
+                    sit amet venenatis tellus justo a justo.
+                    <div class="skill" level="67">
+                        <div class="skill-name">
+                            <div>HTML5 & CSS3</div>
+                            <div>Level</div>
+                        </div>
+                        <div class="skill-bar"></div>
+                    </div>
+                    <div class="skill" level="43">
+                        <div class="skill-name">
+                            <div>Javascript & JQuery</div>
+                            <div>Level</div>
+                        </div>
+                        <div class="skill-bar"></div>
+                    </div>
+                    <div class="skill" level="27">
+                        <div class="skill-name">
+                            <div>PHP</div>
+                            <div>Level</div>
+                        </div>
+                        <div class="skill-bar"></div>
+                    </div>
+                    <div class="skill" level="21">
+                        <div class="skill-name">
+                            <div>MySQL</div>
+                            <div>Level</div>
+                        </div>
+                        <div class="skill-bar"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="info-block">
+                <div class="block-title dark-gray">Education</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet
+                </div>
+            </section>
+            <section id="languages" class="info-block">
+                <div class="block-title dark-gray">Languages</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet
+                </div>
+            </section>
+            <section id="certificates" class="info-block">
+                <div class="block-title dark-gray">Сertificates</div>
+                <div class="block-content">
+                    <div class="certificate">
+                        <div class="certificate-title">JavaScript для начинающих</div>
+                        <div class="certificate-box">
+                            <img src="img/certificates/js-for-beginners-certificate.png" alt="Сертификат"/>
+                            <div class="certificate-action">
+                                <a href="https://stepik.org/cert/955851">
+                                    <div title="Источник">
+                                        <svg version="1.1" id="link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.092 512.092" style="enable-background:new 0 0 512.092 512.092;" xml:space="preserve"><g><g><path d="M312.453,199.601c-6.066-6.102-12.792-11.511-20.053-16.128c-19.232-12.315-41.59-18.859-64.427-18.859c-31.697-0.059-62.106,12.535-84.48,34.987L34.949,308.23c-22.336,22.379-34.89,52.7-34.91,84.318c-0.042,65.98,53.41,119.501,119.39,119.543c31.648,0.11,62.029-12.424,84.395-34.816l89.6-89.6c1.628-1.614,2.537-3.816,2.524-6.108c-0.027-4.713-3.87-8.511-8.583-8.484h-3.413c-18.72,0.066-37.273-3.529-54.613-10.581c-3.195-1.315-6.867-0.573-9.301,1.877l-64.427,64.512c-20.006,20.006-52.442,20.006-72.448,0c-20.006-20.006-20.006-52.442,0-72.448l108.971-108.885c19.99-19.965,52.373-19.965,72.363,0c13.472,12.679,34.486,12.679,47.957,0c5.796-5.801,9.31-13.495,9.899-21.675C322.976,216.108,319.371,206.535,312.453,199.601z"/></g></g><g><g><path d="M477.061,34.993c-46.657-46.657-122.303-46.657-168.96,0l-89.515,89.429c-2.458,2.47-3.167,6.185-1.792,9.387c1.359,3.211,4.535,5.272,8.021,5.205h3.157c18.698-0.034,37.221,3.589,54.528,10.667c3.195,1.315,6.867,0.573,9.301-1.877l64.256-64.171c20.006-20.006,52.442-20.006,72.448,0c20.006,20.006,20.006,52.442,0,72.448l-80.043,79.957l-0.683,0.768l-27.989,27.819c-19.99,19.965-52.373,19.965-72.363,0c-13.472-12.679-34.486-12.679-47.957,0c-5.833,5.845-9.35,13.606-9.899,21.845c-0.624,9.775,2.981,19.348,9.899,26.283c9.877,9.919,21.433,18.008,34.133,23.893c1.792,0.853,3.584,1.536,5.376,2.304c1.792,0.768,3.669,1.365,5.461,2.048c1.792,0.683,3.669,1.28,5.461,1.792l5.035,1.365c3.413,0.853,6.827,1.536,10.325,2.133c4.214,0.626,8.458,1.025,12.715,1.195h5.973h0.512l5.12-0.597c1.877-0.085,3.84-0.512,6.059-0.512h2.901l5.888-0.853l2.731-0.512l4.949-1.024h0.939c20.961-5.265,40.101-16.118,55.381-31.403l108.629-108.629C523.718,157.296,523.718,81.65,477.061,34.993z"/></g>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                    </div>
+                                </a>
+                                <a href="files/certificates/js-for-beginners-certificate.pdf">
+                                    <div title="Скачать">
+                                        <svg id="download-icon" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m154.191.1-63.536 63.535h63.536z"/><path d="m289.128 237h-60.95v198.312h-50.925v.654l80.434 76.034h1.932l80.434-76.034v-.654h-50.925z"/><path d="m184.191 0v93.635h-93.635v343.163h56.697v-31.486h50.925v-198.312h120.95v198.312h50.925v31.486h51.391v-436.798z"/></g></svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <div class="certificate-title">Веб-разработка для начинающих: HTML и CSS</div>
+                        <div class="certificate-box">
+                            <img src="img/certificates/web-development-for-beginners-html-css.png" alt="Сертификат"/>
+                            <div class="certificate-action">
+                                <a href="https://stepik.org/cert/1054309">
+                                    <div title="Источник">
+                                        <svg version="1.1" id="link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.092 512.092" style="enable-background:new 0 0 512.092 512.092;" xml:space="preserve"><g><g><path d="M312.453,199.601c-6.066-6.102-12.792-11.511-20.053-16.128c-19.232-12.315-41.59-18.859-64.427-18.859c-31.697-0.059-62.106,12.535-84.48,34.987L34.949,308.23c-22.336,22.379-34.89,52.7-34.91,84.318c-0.042,65.98,53.41,119.501,119.39,119.543c31.648,0.11,62.029-12.424,84.395-34.816l89.6-89.6c1.628-1.614,2.537-3.816,2.524-6.108c-0.027-4.713-3.87-8.511-8.583-8.484h-3.413c-18.72,0.066-37.273-3.529-54.613-10.581c-3.195-1.315-6.867-0.573-9.301,1.877l-64.427,64.512c-20.006,20.006-52.442,20.006-72.448,0c-20.006-20.006-20.006-52.442,0-72.448l108.971-108.885c19.99-19.965,52.373-19.965,72.363,0c13.472,12.679,34.486,12.679,47.957,0c5.796-5.801,9.31-13.495,9.899-21.675C322.976,216.108,319.371,206.535,312.453,199.601z"/></g></g><g><g><path d="M477.061,34.993c-46.657-46.657-122.303-46.657-168.96,0l-89.515,89.429c-2.458,2.47-3.167,6.185-1.792,9.387c1.359,3.211,4.535,5.272,8.021,5.205h3.157c18.698-0.034,37.221,3.589,54.528,10.667c3.195,1.315,6.867,0.573,9.301-1.877l64.256-64.171c20.006-20.006,52.442-20.006,72.448,0c20.006,20.006,20.006,52.442,0,72.448l-80.043,79.957l-0.683,0.768l-27.989,27.819c-19.99,19.965-52.373,19.965-72.363,0c-13.472-12.679-34.486-12.679-47.957,0c-5.833,5.845-9.35,13.606-9.899,21.845c-0.624,9.775,2.981,19.348,9.899,26.283c9.877,9.919,21.433,18.008,34.133,23.893c1.792,0.853,3.584,1.536,5.376,2.304c1.792,0.768,3.669,1.365,5.461,2.048c1.792,0.683,3.669,1.28,5.461,1.792l5.035,1.365c3.413,0.853,6.827,1.536,10.325,2.133c4.214,0.626,8.458,1.025,12.715,1.195h5.973h0.512l5.12-0.597c1.877-0.085,3.84-0.512,6.059-0.512h2.901l5.888-0.853l2.731-0.512l4.949-1.024h0.939c20.961-5.265,40.101-16.118,55.381-31.403l108.629-108.629C523.718,157.296,523.718,81.65,477.061,34.993z"/></g>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                    </div>
+                                </a>
+                                <a href="files/certificates/web-development-for-beginners-html-css.pdf">
+                                    <div title="Скачать">
+                                        <svg id="download-icon" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m154.191.1-63.536 63.535h63.536z"/><path d="m289.128 237h-60.95v198.312h-50.925v.654l80.434 76.034h1.932l80.434-76.034v-.654h-50.925z"/><path d="m184.191 0v93.635h-93.635v343.163h56.697v-31.486h50.925v-198.312h120.95v198.312h50.925v31.486h51.391v-436.798z"/></g></svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="interests" class="info-block">
+                <div class="block-title dark-gray">Interests</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet
+                </div>
+            </section>
+            <section id="credits" class="info-block">
+                <div class="block-title dark-gray">Credits</div>
+                <div class="block-content">
+                    Lorem ipsum dolor sit amet
+                </div>
+            </section>
+        </aside>
+    </section>
 </body>
+<footer>
+    <script type="text/javascript" src="js/fill_skills_bar.js"></script>
+    <script type="text/javascript" src="js/add_github.js"></script>
+</footer>
 </html>
 

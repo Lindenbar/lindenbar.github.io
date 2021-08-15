@@ -86,11 +86,11 @@
     fill: #c2c2c2;
 }
 
-.certificateAction a:hover div #link-icon {
+.certificate-action a:hover div #link-icon {
     fill: #4183c4 !important;
 }
 
-.certificateAction a:hover div #download-icon {
+.certificate-action a:hover div #download-icon {
     fill: #25ab21 !important;
 }
 
