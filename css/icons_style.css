@@ -1,3 +1,12 @@
+:root {
+    --vk-icon-size: 23px;
+    --instagram-icon-size: 17px;
+    --telegram-icon-size: 19px;
+    --whatsapp-icon-size: 18.7px;
+    --discord-icon-size: 20px;
+    --icon-changing-size-coefficient: 7px;
+}
+
 #person-preview .icon {
     fill: #798490;
     margin-right: 7px;
@@ -5,62 +14,62 @@
 }
 
 #person-preview .icon:hover {
-    margin-bottom: -7px
+    margin-bottom: calc(var(--icon-changing-size-coefficient) * -1);
 }
 
 #person-preview #discord-icon {
-    width: 20px;
-    height: 20px;
+    width: var(--discord-icon-size);
+    height: var(--discord-icon-size);
 }
 
 #person-preview #discord-icon:hover {
     fill: #5865F2;
-    width: 27px;
-    height: 27px;
+    width: calc(var(--discord-icon-size) + var(--icon-changing-size-coefficient));
+    height: calc(var(--discord-icon-size) + var(--icon-changing-size-coefficient));
 }
 
 #person-preview #instagram-icon {
-    width: 17px;
-    height: 17px;
+    width: var(--instagram-icon-size);
+    height: var(--instagram-icon-size);
 }
 
 #person-preview #instagram-icon:hover {
-    width: 24px;
-    height: 24px;
+    width: calc(var(--instagram-icon-size) + var(--icon-changing-size-coefficient));
+    height: calc(var(--instagram-icon-size) + var(--icon-changing-size-coefficient));
     fill: url(#myGradient);
 }
 
 #person-preview #telegram-icon {
-    width: 19px;
-    height: 19px;
+    width: var(--telegram-icon-size);
+    height: var(--telegram-icon-size);
 }
 
 #person-preview #telegram-icon:hover {
     fill: #3390ec;
-    width: 26px;
-    height: 26px;
+    width: calc(var(--telegram-icon-size) + var(--icon-changing-size-coefficient));
+    height: calc(var(--telegram-icon-size) + var(--icon-changing-size-coefficient));
 }
 
 #person-preview #vk-icon {
-    width: 23px;
-    height: 23px;
+    width: var(--vk-icon-size);
+    height: var(--vk-icon-size);
 }
 
 #person-preview #vk-icon:hover {
     fill: #2787f5;
-    width: 30px;
-    height: 30px;
+    width: calc(var(--vk-icon-size) + var(--icon-changing-size-coefficient));
+    height: calc(var(--vk-icon-size) + var(--icon-changing-size-coefficient));
 }
 
 #person-preview #whatsapp-icon {
-    width: 18.7px;
-    height: 18.7px;
+    width: var(--whatsapp-icon-size);
+    height: var(--whatsapp-icon-size);
 }
 
 #person-preview #whatsapp-icon:hover {
     fill: #00e676;
-    width: 25.7px;
-    height: 25.7px;
+    width: calc(var(--whatsapp-icon-size) + var(--icon-changing-size-coefficient));
+    height: calc(var(--whatsapp-icon-size) + var(--icon-changing-size-coefficient));
 }
 
 #contact-me #vk-icon {
@@ -90,6 +99,25 @@
     #contact-me #vk-icon {
         height: 19px !important;
         width: 19px !important;
+    }
+}
+
+@media (max-width: 510px) {
+
+    :root {
+        --vk-icon-size: 35px;
+        --instagram-icon-size: 29px;
+        --telegram-icon-size: 31px;
+        --whatsapp-icon-size: 30.7px;
+        --discord-icon-size: 32px;
+    }
+
+    #person-preview #vk-icon {
+        margin-top: -6.3px;
+    }
+
+    #person-preview .icon {
+        fill: var(--transparent-white);
     }
 }
 

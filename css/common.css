@@ -4,6 +4,7 @@
     --main-text-size: 28px;
     --under-main-text-size: 18px;
     --text-changin-coefficient: 4px;
+    --transparent-white: rgba(255, 255, 255, 0.7);
 }
 
 * {

@@ -5,12 +5,7 @@ header {
 header section {
     justify-content: space-between;
     padding: 20px 70px;
-}
-
-header img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    transition: var(--delay-time);
 }
 
 #header-line {
@@ -92,5 +87,38 @@ header img {
     #contact-me div {
         font-size: calc(var(--default-text-size) - var(--text-changin-coefficient));
         padding: 2px 7px;
+    }
+}
+
+@media (max-width: 510px) {
+    #avatar-box, #contact-me {
+        display: none;
+    }
+
+    header section {
+        padding: 5px 10px;
+        min-height: 450px;
+        background-image: url("../img/avatar.jpg");
+        background-size: cover;
+        background-position-y: center;
+    }
+
+    #person-preview {
+        justify-content: flex-end;
+    }
+
+    #person-preview div:first-child {
+        color: var(--transparent-white);
+        font-size: calc(var(--main-text-size) + var(--text-changin-coefficient) * 2);
+    }
+
+    #person-preview div:nth-child(2) {
+        color: var(--transparent-white);
+        font-size: calc(var(--under-main-text-size) + var(--text-changin-coefficient));
+    }
+
+    #person-preview div:nth-child(3) {
+        display: flex;
+        justify-content: space-between;
     }
 }
