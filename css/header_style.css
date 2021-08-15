@@ -26,7 +26,7 @@ header img {
     background-image: url("../img/avatar.jpg");
     background-size: cover;
     background-position-y: center;
-    transition: var(--delay-time); ;
+    transition: var(--delay-time);
 }
 
 #avatar-box:hover {
@@ -51,7 +51,6 @@ header img {
 
 #contact-me {
     align-items: center;
-    transition: var(--delay-time);
 }
 
 #contact-me div {
@@ -59,6 +58,7 @@ header img {
     padding: 5px 10px;
     background-color: #43b436;
     border-radius: 5px;
+    transition: var(--delay-time);
 }
 
 #contact-me div:hover {
@@ -91,8 +91,6 @@ header img {
 
     #contact-me div {
         font-size: calc(var(--default-text-size) - var(--text-changin-coefficient));
-        padding: 5px 10px;
-        background-color: #43b436;
-        border-radius: 5px;
+        padding: 2px 7px;
     }
 }
