@@ -1,7 +1,7 @@
 #person-preview .icon {
     fill: #798490;
     margin-right: 7px;
-    transition: 0.2s;
+    transition: var(--delay-time);
 }
 
 #person-preview .icon:hover {
@@ -64,6 +64,7 @@
 }
 
 #contact-me #vk-icon {
+    transition: var(--delay-time);
     height: 25px;
     width: 25px;
     margin-right: 10px;
@@ -82,5 +83,13 @@
 
 .certificateAction a:hover div #download-icon {
     fill: #25ab21 !important;
+}
+
+@media (max-width: 590px) {
+
+    #contact-me #vk-icon {
+        height: 21px !important;
+        width: 21px !important;
+    }
 }
 

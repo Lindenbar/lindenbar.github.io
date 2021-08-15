@@ -1,12 +1,12 @@
-//< Загрузка html документов в теги import, где атрибут "file" - путь к html файлу
+//< Загрузка html документов в теги import, где атрибут "file" - путь к html файлу.
 $(function importHTML(findPlace = $('html')) {
     let importPlaces = findPlace.find('import');
 
     if (importPlaces[0]) {
         $(importPlaces).each((i, importTag) => {
             let file = importTag.getAttribute('file');
+            // Поиск продолжится с родителя в который был произведен последний импорт.
             findPlace = $(importTag.parentNode);
-            console.log(findPlace);
             importTag = $(importTag).load(file, () => {
                 importTag.replaceWith(importTag.html());
                 /* В импортированных файлах, тоже может быть импорт, поэтому снова вызываем функцию.
@@ -17,8 +17,6 @@ $(function importHTML(findPlace = $('html')) {
                 importHTML(findPlace);
             });
         });
-    } else {
-        console.log('imported');
     }
 });
 //>

@@ -26,7 +26,7 @@ header img {
     background-image: url("../img/avatar.jpg");
     background-size: cover;
     background-position-y: center;
-    transition: border-radius 0.4s ;
+    transition: var(--delay-time); ;
 }
 
 #avatar-box:hover {
@@ -39,16 +39,19 @@ header img {
 }
 
 #person-preview div:first-child {
-    font-size: 28px;
+    font-size: var(--main-text-size);
+    transition: var(--delay-time);
 }
 
 #person-preview div:nth-child(2) {
-    font-size: 18px;
+    font-size: var(--under-main-text-size);
     margin-bottom: 5px;
+    transition: var(--delay-time);
 }
 
 #contact-me {
     align-items: center;
+    transition: var(--delay-time);
 }
 
 #contact-me div {
@@ -65,4 +68,31 @@ header img {
 #contact-me a {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 740px) {
+    #avatar-box {
+        padding: 43px;
+    }
+
+    header section {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 590px) {
+    #person-preview div:first-child {
+        font-size: calc(var(--main-text-size) - var(--text-changin-coefficient));
+    }
+
+    #person-preview div:nth-child(2) {
+        font-size: calc(var(--under-main-text-size) - var(--text-changin-coefficient));
+    }
+
+    #contact-me div {
+        font-size: calc(var(--default-text-size) - var(--text-changin-coefficient));
+        padding: 5px 10px;
+        background-color: #43b436;
+        border-radius: 5px;
+    }
 }
