@@ -20,3 +20,10 @@
 .js-calendar-graph {
     padding: 15px;
 }
+
+@media (max-width: 510px) {
+    #git-activity {
+        height: 300px;
+        width: 100%;
+    }
+}
