@@ -53,7 +53,7 @@ header section {
     padding: 5px 10px;
     background-color: #43b436;
     border-radius: 5px;
-    transition: var(--delay-time);
+    transition: padding var(--delay-time);
 }
 
 #contact-me div:hover {
