@@ -1,0 +1,14 @@
+[
+  {
+    "link": "https://lindenbar.github.io/uniweb_test_task/",
+    "article": "Верстка страницы \"Ваш дом\"",
+    "preview": "img/projects/vash_dom.jpg",
+    "text": "files/txt/projects/vash_dom.txt"
+  },
+  {
+    "link": "https://lindenbar.github.io/levelup/",
+    "article": "Верстка адаптивного лендинга \"LevelUp\"",
+    "preview": "img/projects/levelup.jpg",
+    "text": "files/txt/projects/levelup.txt"
+  }
+]
